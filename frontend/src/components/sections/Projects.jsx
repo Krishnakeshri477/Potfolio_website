@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "A responsive portfolio website built with React, Tailwind CSS, and Vite.",
       tags: ["React", "Tailwind CSS", "Node.js", "Express" , "MongoDB"],
-      githubUrl: "https://github.com/Krishnakeshri477/your-portfolio-repo",
+      githubUrl: "https://github.com/Krishnakeshri477/potfolio_website",
       liveUrl: "https://yourportfolio.com",
       image: "/Screenshot 2025-05-10 034915.png"
     },
