@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-Krishna_web_dev.pdf
+/public/Krishna_web_dev.pdf
 dist
 dist-ssr
 *.local
