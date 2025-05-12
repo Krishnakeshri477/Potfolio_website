@@ -10,7 +10,7 @@ const Projects = () => {
       description: "A responsive portfolio website built with React, Tailwind CSS, and Vite.",
       tags: ["React", "Tailwind CSS", "Node.js", "Express" , "MongoDB"],
       githubUrl: "https://github.com/Krishnakeshri477/potfolio_website",
-      liveUrl: "https://yourportfolio.com",
+      liveUrl: "",
       image: "/Screenshot 2025-05-10 034915.png"
     },
     {
@@ -19,8 +19,17 @@ const Projects = () => {
       description: "Interactive Data Structures and Algorithms visualizer with step-by-step animations and real-time code execution.",
       tags: ["React", "Vite", "Tailwind CSS"],
       githubUrl: "https://github.com/Krishnakeshri477/DSA_Visualizer.git",
-      liveUrl: "https://yourapp.com",
+      liveUrl: "",
       image: "/Screenshot 2025-05-10 033822.png"
+    },
+    {
+      id: 3,
+      title: "",
+      description:"Explore our government scheme website for direct links to apply, video tutorials for guidance, and a list of required documents—all in one place!",
+      tags: ["React", "Tailwind CSS", "Node.js", "Express" , "MongoDB"],
+      githubUrl: "https://github.com/Krishnakeshri477/Goverment_Scheme",
+      liveUrl: "",
+      image: "/Screenshot 2025-05-12 232946.png"
     }
   ];
 
