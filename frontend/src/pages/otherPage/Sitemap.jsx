@@ -20,7 +20,7 @@ const Sitemap = () => {
     },
     {
       title: "Privacy Policy",
-      path: "/privacy-policy",
+      path: "/privacy",
       description: "How I handle your personal data"
     }
   ];
