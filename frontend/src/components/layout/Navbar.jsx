@@ -23,6 +23,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
     { name: 'Skills', path: '/skills' },
+    { name: 'Experience', path: '/experience' },
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -36,7 +37,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 shadow-sm backdrop-blur-md dark:bg-gray-900/90' : 'bg-transparent'
+        scrolled ? 'bg-white/90 shadow-sm backdrop-blur-md dark:bg-gray-900' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -50,8 +51,9 @@ const Navbar = () => {
         </NavLink>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex space-x-6">
+        <div>
+          <nav className="hidden md:flex items-center gap-8">
+            <ul className="flex space-x-6">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <NavLink
@@ -86,6 +88,7 @@ const Navbar = () => {
             ))}
           </div>
         </nav>
+        </div>
 
         {/* Mobile menu button */}
         <motion.button
@@ -108,6 +111,19 @@ const Navbar = () => {
         animate={{ x: isOpen ? 0 : '100%' }}
         aria-hidden={!isOpen}
       >
+        {/* Close button positioned at the top right */}
+        <div className="absolute top-5 right-5">
+          <motion.button
+            onClick={closeMenu}
+            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Close menu"
+          >
+            <FiX size={28} />
+          </motion.button>
+        </div>
+
         <div className="container mx-auto px-4 py-8 h-full flex flex-col">
           <ul className="flex flex-col space-y-6 mt-20">
             {navLinks.map((link) => (

@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaDatabase, FaServer , FaCode , FaJava , FaPython } from 'react-icons/fa';
-import { SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiCss3 , SiHtml5 , SiC , SiCplusplus } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDatabase, FaServer, FaCode, FaJava, FaPython,FaGitAlt,FaDocker} from 'react-icons/fa';
+import { SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiCss3, SiHtml5, SiC, SiCplusplus,SiKubernetes,SiRedux,SiGithubactions} from 'react-icons/si';
+import AnimatedBackground from '../components/ui/AnimatedBackground';
 
 const Skills = () => {
   const skillCategories = [
@@ -42,12 +43,40 @@ const Skills = () => {
         { name: "Java", level: 75, icon: <FaJava className="text-red-500" /> },
         { name: "Python", level: 60, icon: <FaPython className="text-blue-400" /> }
       ]
+    },
+    {
+      title: "DevOps & Tools",
+      icon: <FaDocker className="text-blue-400 text-3xl" />,
+      color: "from-cyan-400 to-cyan-600",
+      skills: [
+        { name: "Git", level: 85, icon: <FaGitAlt className="text-orange-600" /> },
+        { name: "Docker", level: 70, icon: <FaDocker className="text-blue-400" /> },
+        { name: "Kubernetes", level: 50, icon: <SiKubernetes className="text-blue-500" /> },
+        { name: "CI/CD", level: 60, icon: <SiGithubactions className="text-gray-700 dark:text-gray-300" /> }
+      ]
+    },
+    {
+      title: "State Management",
+      icon: <SiRedux className="text-purple-500 text-3xl" />,
+      color: "from-violet-400 to-violet-600",
+      skills: [
+        { name: "Redux", level: 80, icon: <SiRedux className="text-purple-500" /> },
+        { name: "Context API", level: 85, icon: <FaReact className="text-blue-500" /> }
+      ]
     }
   ];
 
   return (
-    <section className="py-20 px-4 bg-white dark:bg-gray-900">
-      <div className="container mx-auto">
+    <section className="py-20 px-4 bg-white dark:bg-gray-900 relative overflow-hidden">
+      {/* Add AnimatedBackground here */}
+      <AnimatedBackground 
+        opacity={3}
+        darkOpacity={2} 
+        color="blue" 
+        darkColor="purple" 
+      />
+      
+      <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -111,29 +140,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Additional Skills
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-16 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md"
-        >
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
-            Other Tools & Technologies
-          </h3>
-          {/* <div className="flex flex-wrap gap-3">
-            {['Git', 'Docker', 'AWS', 'Firebase', 'Redux', 'GraphQL', 'Jest', 'CI/CD'].map((tool, index) => (
-              <motion.span
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="px-4 py-2 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full shadow-sm text-sm font-medium"
-              >
-                {tool}
-              </motion.span>
-            ))}
-          </div> */}
-        {/* </motion.div> */}
       </div>
     </section>
   );

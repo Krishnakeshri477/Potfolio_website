@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from '../components/ui/Button';
 import { FiUser, FiMail, FiMessageSquare } from 'react-icons/fi';
-import apiService from '../services/api';
+import AnimatedBackground from '../components/ui/AnimatedBackground';
 
 const ContactPage = () => {
   const [values, setValues] = useState({ name: '', email: '', message: '' });
@@ -28,7 +28,7 @@ const ContactPage = () => {
     return newErrors;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -40,17 +40,14 @@ const ContactPage = () => {
     setErrors({});
 
     try {
-      await apiService.post('/contact', values);
+      const subject = encodeURIComponent(`Contact from ${values.name}`);
+      const body = encodeURIComponent(`${values.message}\n\nFrom: ${values.name}\nEmail: ${values.email}`);
+      window.location.href = `mailto:krishnakeshri9510ib@gmail.com?subject=${subject}&body=${body}`;
+      
       setSubmitSuccess(true);
       setValues({ name: '', email: '', message: '' });
     } catch (error) {
-      let errorMessage = 'Failed to send message. Please try again later.';
-      if (error.response?.status === 400) {
-        errorMessage = error.response.data?.message || 'Invalid form data';
-      } else if (error.response?.status === 429) {
-        errorMessage = 'Too many requests. Please try again later.';
-      }
-      setErrors({ form: errorMessage });
+      setErrors({ form: `${error}Failed to prepare email. Please try again.` });
     } finally {
       setIsSubmitting(false);
     }
@@ -67,9 +64,17 @@ const ContactPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900"
+      className="py-16 px-4 sm:px-6 lg:px-8 min-h-screen bg-gray-50 dark:bg-gray-900 relative overflow-hidden"
     >
-      <div className="max-w-3xl mx-auto">
+      {/* Add AnimatedBackground here */}
+      <AnimatedBackground 
+        opacity={10}
+        darkOpacity={3} 
+        color="blue" 
+        darkColor="purple" 
+      />
+      
+      <div className="max-w-3xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Get In Touch
@@ -96,15 +101,15 @@ const ContactPage = () => {
             </Button>
           </motion.div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl shadow-lg">
             {/* Name */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">
                 Name
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FiUser className="h-5 w-5 text-gray-400" />
+                  <FiUser className="h-8 w-5 text-gray-400" />
                 </div>
                 <input
                   type="text"
@@ -112,7 +117,7 @@ const ContactPage = () => {
                   name="name"
                   value={values.name}
                   onChange={handleChange}
-                  className={`pl-10 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:text-white ${
+                  className={`pl-10 block w-full h-12 rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700/50 dark:text-white ${
                     errors.name ? 'border-red-500' : ''
                   }`}
                   placeholder="Your name"
@@ -123,12 +128,12 @@ const ContactPage = () => {
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">
                 Email
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FiMail className="h-5 w-5 text-gray-400" />
+                  <FiMail className="h-8 w-5 text-gray-400" />
                 </div>
                 <input
                   type="email"
@@ -136,7 +141,7 @@ const ContactPage = () => {
                   name="email"
                   value={values.email}
                   onChange={handleChange}
-                  className={`pl-10 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:text-white ${
+                  className={`pl-10 block w-full h-12 rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700/50 dark:text-white ${
                     errors.email ? 'border-red-500' : ''
                   }`}
                   placeholder="your.email@example.com"
@@ -147,7 +152,7 @@ const ContactPage = () => {
 
             {/* Message */}
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4">
                 Message
               </label>
               <div className="relative">
@@ -160,7 +165,7 @@ const ContactPage = () => {
                   rows={5}
                   value={values.message}
                   onChange={handleChange}
-                  className={`pl-10 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:text-white ${
+                  className={`pl-10 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700/50 dark:text-white ${
                     errors.message ? 'border-red-500' : ''
                   }`}
                   placeholder="Your message..."

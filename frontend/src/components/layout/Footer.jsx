@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
-// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import AnimatedBackground from '../ui/AnimatedBackground';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -32,15 +33,24 @@ const Footer = () => {
   const footerLinks = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'Skills' , path: '/skills'},
     { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Sitemap' , path: '/sitemap'}
   ];
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 relative overflow-hidden">
+      {/* Add AnimatedBackground here */}
+      <AnimatedBackground 
+        opacity={10} 
+        darkOpacity={5} 
+        color="blue" 
+        darkColor="purple" 
+      />
+      
+      <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Branding */}
           <div className="md:col-span-2">
@@ -76,7 +86,7 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {footerLinks.slice(0, 3).map((link) => (
+              {footerLinks.slice(0, 4).map((link) => (
                 <li key={link.name}>
                   <a 
                     href={link.path} 
@@ -95,7 +105,7 @@ const Footer = () => {
               Legal
             </h3>
             <ul className="space-y-2">
-              {footerLinks.slice(3).map((link) => (
+              {footerLinks.slice(4).map((link) => (
                 <li key={link.name}>
                   <a 
                     href={link.path} 

@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import AnimatedBackground from '../ui/AnimatedBackground';
 
 const Projects = () => {
   const projects = [
@@ -8,7 +9,7 @@ const Projects = () => {
       id: 1,
       title: "Portfolio Website",
       description: "A responsive portfolio website built with React, Tailwind CSS, and Vite.",
-      tags: ["React", "Tailwind CSS", "Node.js", "Express" , "MongoDB"],
+      tags: ["React", "Tailwind CSS", "Vite"],
       githubUrl: "https://github.com/Krishnakeshri477/potfolio_website",
       liveUrl: "",
       image: "/Screenshot 2025-05-10 034915.png"
@@ -19,7 +20,7 @@ const Projects = () => {
       description: "Interactive Data Structures and Algorithms visualizer with step-by-step animations and real-time code execution.",
       tags: ["React", "Vite", "Tailwind CSS"],
       githubUrl: "https://github.com/Krishnakeshri477/DSA_Visualizer.git",
-      liveUrl: "",
+      liveUrl: "https://dsa-visulizer.netlify.app/",
       image: "/Screenshot 2025-05-10 033822.png"
     },
     {
@@ -27,15 +28,23 @@ const Projects = () => {
       title: "",
       description:"Explore our government scheme website for direct links to apply, video tutorials for guidance, and a list of required documents—all in one place!",
       tags: ["React", "Tailwind CSS", "Node.js", "Express" , "MongoDB"],
-      githubUrl: "https://github.com/Krishnakeshri477/Goverment_Scheme",
+      githubUrl: "https://github.com/Krishnakeshri477/hackthon",
       liveUrl: "",
       image: "/Screenshot 2025-05-12 232946.png"
     }
   ];
 
   return (
-    <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto">
+    <section className="py-20 px-4 h-screen bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+      {/* Add AnimatedBackground here */}
+      <AnimatedBackground 
+        opacity={5}
+        darkOpacity={3} 
+        color="blue" 
+        darkColor="purple" 
+      />
+      
+      <div className="container mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -93,14 +102,16 @@ const Projects = () => {
                   >
                     <FaGithub className="mr-2" /> Code
                   </a>
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                  >
-                    <FaExternalLinkAlt className="mr-2" /> Live Demo
-                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      <FaExternalLinkAlt className="mr-2" /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

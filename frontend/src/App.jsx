@@ -10,6 +10,7 @@ import Contact from './pages/ContactPage';
 import Blog from './pages/otherPage/Blog';
 import PrivacyPolicy from './pages/otherPage/PrivacyPolicy';
 import Sitemap from './pages/otherPage/Sitemap';
+import Experience from './pages/Experience';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='/blog' element={<Blog/>}/>
           <Route path='/privacy' element={<PrivacyPolicy/>}/>
           <Route path='/sitemap' element={<Sitemap/>}/>
+          <Route path='/experience' element={<Experience/>}/>
         </Routes>
       </main>
       <Footer />
