@@ -35,8 +35,8 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 px-4 h-screen bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
-      {/* Add AnimatedBackground here */}
+    <section className="py-20 px-4 min-h-screen bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+
       <AnimatedBackground 
         opacity={5}
         darkOpacity={3} 

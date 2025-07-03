@@ -34,10 +34,7 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
     { name: 'Skills' , path: '/skills'},
-    { name: 'Contact', path: '/contact' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Sitemap' , path: '/sitemap'}
+    { name: 'Contact', path: '/contact' }
   ];
 
   return (
@@ -50,8 +47,8 @@ const Footer = () => {
         darkColor="purple" 
       />
       
-      <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-8 py-12 relative z-10">
+        <div className="flex justify-between">
           {/* Branding */}
           <div className="md:col-span-2">
             <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
@@ -99,24 +96,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
-              Legal
-            </h3>
-            <ul className="space-y-2">
-              {footerLinks.slice(4).map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.path} 
-                    className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Copyright */}
