@@ -54,9 +54,9 @@ const Hero = () => {
                 sequence={[
                   'Full Stack Developer',
                   2000,
-                  'React Specialist',
+                  'Devops Engineer',
                   2000,
-                  'Node.js Engineer',
+                  'Software Engineer',
                   2000,
                 ]}
                 wrapper="span"
@@ -165,7 +165,7 @@ const Hero = () => {
       
       {/* Enhanced scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-14 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
         animate={{ y: [0, 15, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
       >

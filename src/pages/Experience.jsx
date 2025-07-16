@@ -9,14 +9,14 @@ const Experience = () => {
       logo: "/dp.jpg",
       company: "Bluestock Finetech",
       role: "Software Developer Intern",
-      duration: "Jun 2025 - Present",
+      duration: "June 2025 - July 2025",
       description: [
-        "Developed responsive web applications using React and Next.js",
+        "Developed responsive web applications using React.js",
         "Collaborated with UX designers to implement pixel-perfect interfaces",
-        "Optimized application performance, reducing load times by 40%",
-        "Mentored junior developers in modern JavaScript practices"
+        "Optimized application performance, reducing load times by 40% by the help of Redux",
+        "Implemented RESTful APIs with Node.js and Express.js",
       ],
-      skills: ["Reactjs", "Node.js", "Next.js", "Tailwind CSS"]
+      skills: ["React.js", "Node.js", "Express.js", "Tailwind CSS"]
     }
   ];
 
