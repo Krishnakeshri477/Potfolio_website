@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import AnimatedBackground from '../ui/AnimatedBackground';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -85,12 +86,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.slice(0, 4).map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.path} 
+                  <NavLink
+                    to={link.path} 
                     className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
