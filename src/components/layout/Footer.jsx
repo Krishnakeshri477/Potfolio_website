@@ -84,10 +84,10 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {footerLinks.slice(0, 4).map((link) => (
+              {footerLinks.map((link) => (
                 <li key={link.name}>
                   <NavLink
-                    to={link.path} 
+                    to={link.path}
                     className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                   >
                     {link.name}
