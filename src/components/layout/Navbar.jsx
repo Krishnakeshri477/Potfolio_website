@@ -36,16 +36,15 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 shadow-sm backdrop-blur-md dark:bg-gray-900' : 'bg-transparent'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 `}
     >
+      <div className={`${scrolled ? 'bg-white/90 shadow-sm backdrop-blur-md dark:bg-gray-900' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <NavLink 
-          to="/" 
+        <NavLink
+          to="/"
+          onClick={() => { window.scrollTo(0, 0); closeMenu(); }}
           className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-          onClick={closeMenu}
         >
           PORTFOLIO
         </NavLink>
@@ -58,6 +57,7 @@ const Navbar = () => {
               <li key={link.name}>
                 <NavLink
                   to={link.path}
+                  onClick={() => { window.scrollTo(0, 0); closeMenu(); }}
                   className={({ isActive }) => 
                     `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive 
@@ -100,6 +100,7 @@ const Navbar = () => {
         >
           {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </motion.button>
+      </div>
       </div>
 
       {/* Mobile Menu */}
