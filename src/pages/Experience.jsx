@@ -16,7 +16,8 @@ const Experience = () => {
         "Optimized application performance, reducing load times by 40% by the help of Redux",
         "Implemented RESTful APIs with Node.js and Express.js",
       ],
-      skills: ["React.js", "Node.js", "Express.js", "Tailwind CSS"]
+      skills: ["React.js", "Node.js", "Express.js", "Tailwind CSS"],
+      certificate: "https://drive.google.com/file/d/1Tlb7pTy4bffYSGKGvGMK5EFcbMjbNdEg/view?usp=drivesdk"
     }
   ];
 
@@ -84,7 +85,11 @@ const Experience = () => {
                     <div className="flex-1">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                         <h3 className="text-xl font-bold text-gray-800 dark:text-white">{exp.role}</h3>
-                        <span className="text-sm font-medium text-blue-600 dark:text-purple-400">{exp.duration}</span>
+                        <div className='flex flex-col items-center gap-3'>
+                          <span className="text-sm font-medium text-blue-600 dark:text-purple-400">{exp.duration}</span>
+                          {/* certificate */}
+                          <a href={exp.certificate} className="text-xl font-bold text-blue-600 dark:text-zinc-200 ml-2 uppercase" target="_blank" rel="noopener noreferrer">Certificate</a>
+                        </div>
                       </div>
                       <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">{exp.company}</h4>
                       

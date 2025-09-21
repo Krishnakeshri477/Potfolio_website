@@ -25,7 +25,16 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "",
+      title: "AI Interviewer",
+      description: "It provides users with personalized questions, evaluates their responses, and offers instant feedback to improve communication, technical, and problem-solving skills.It helps candidates practice effectively and gain confidence before facing real interviews.",
+      tags: ["React","Express","Node","MongoDB"],
+      githubUrl: "https://github.com/Krishnakeshri477/AI-Interview-Prepration-Platform",
+      liveUrl: "",
+      image: "/Screenshot 2025-09-21 134642.png"
+    },
+    {
+      id: 4,
+      title: "Jharkhand Government Scheme",
       description:"Explore our government scheme website for direct links to apply, video tutorials for guidance, and a list of required documents—all in one place!",
       tags: ["React", "Tailwind CSS", "Node.js", "Express" , "MongoDB"],
       githubUrl: "https://github.com/Krishnakeshri477/hackthon",

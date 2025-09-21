@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaDatabase, FaServer, FaCode, FaJava, FaPython, FaGitAlt, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiCss3, SiHtml5, SiC, SiCplusplus, SiKubernetes, SiRedux, SiGithubactions } from 'react-icons/si';
+import { SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiCss3, SiHtml5, SiC, SiCplusplus, SiKubernetes, SiRedux, SiGithubactions , SiNextdotjs} from 'react-icons/si';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
+
 
 const Skills = () => {
   const skillCategories = [
@@ -14,17 +15,19 @@ const Skills = () => {
         { name: "HTML", icon: <SiHtml5 className='text-orange-500 text-2xl' /> },
         { name: "CSS", icon: <SiCss3 className='text-blue-500 text-2xl' /> },
         { name: "JavaScript", icon: <SiJavascript className="text-yellow-400 text-2xl" /> },
-        { name: "React", icon: <FaReact className="text-blue-400 text-2xl" /> },
+        { name: "React.js", icon: <FaReact className="text-blue-400 text-2xl" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="text-white text-2xl" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 text-2xl" /> }
       ]
     },
+
     {
       title: "Backend",
       icon: <FaNodeJs className="text-zinc-700 text-3xl" />,
       color: "from-green-400 to-green-600",
       skills: [
         { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-2xl" /> },
-        { name: "Express", icon: <SiExpress className="text-gray-800 dark:text-gray-200 text-2xl" /> },
+        { name: "Express.js", icon: <SiExpress className="text-gray-800 dark:text-gray-200 text-2xl" /> },
         { name: "REST APIs", icon: <FaServer className="text-gray-500 text-2xl" /> }
       ]
     },
@@ -72,13 +75,13 @@ const Skills = () => {
 
   return (
     <section className="py-20 px-4 bg-white dark:bg-gray-900 relative overflow-hidden">
-      <AnimatedBackground 
+      <AnimatedBackground
         opacity={3}
-        darkOpacity={2} 
-        color="blue" 
-        darkColor="purple" 
+        darkOpacity={2}
+        color="blue"
+        darkColor="purple"
       />
-      
+
       <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
