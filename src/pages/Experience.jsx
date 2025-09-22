@@ -88,7 +88,7 @@ const Experience = () => {
                         <div className='flex flex-col items-center gap-3'>
                           <span className="text-sm font-medium text-blue-600 dark:text-purple-400">{exp.duration}</span>
                           {/* certificate */}
-                          <a href={exp.certificate} className="text-xl font-bold text-blue-600 dark:text-zinc-200 ml-2 uppercase" target="_blank" rel="noopener noreferrer">Certificate</a>
+                          <a href={exp.certificate} className="text-xl font-bold text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ml-2 uppercase" target="_blank" rel="noopener noreferrer">Certificate</a>
                         </div>
                       </div>
                       <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">{exp.company}</h4>
