@@ -149,7 +149,7 @@ const Hero = () => {
                 }}
               >
                 <img 
-                  src="https://drive.google.com/file/d/1CrQQs57sOm-zZX5zO-xWqOYl1ZU7NVOl/view?usp=drivesdk"
+                  src="https://ik.imagekit.io/y7ngbwzm5/my%20image"
                   alt="Krishna Keshri"
                   className="w-full h-full object-cover"
                 />
