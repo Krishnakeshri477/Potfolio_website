@@ -149,7 +149,7 @@ const Hero = () => {
                 }}
               >
                 <img 
-                  src="https://media.licdn.com/dms/image/v2/D4D35AQHlSiohsaqUFA/profile-framedphoto-shrink_400_400/B4DZbQSrpCHoAg-/0/1747251280800?e=1750712400&v=beta&t=CteB4fGWACtaj6C7-FBn5rkO9_ArtTPApwUoDsEKeyE"
+                  src="/public/myimage.png"
                   alt="Krishna Keshri"
                   className="w-full h-full object-cover"
                 />

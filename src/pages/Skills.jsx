@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaDatabase, FaServer, FaCode, FaJava, FaPython, FaGitAlt, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiCss3, SiHtml5, SiC, SiCplusplus, SiKubernetes, SiRedux, SiGithubactions , SiNextdotjs} from 'react-icons/si';
+import { SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiCss3, SiHtml5, SiC, SiCplusplus, SiKubernetes, SiRedux, SiGithubactions , SiNextdotjs,SiAngular,SiDjango} from 'react-icons/si';
 import AnimatedBackground from '../components/ui/AnimatedBackground';
 
 
@@ -17,7 +17,8 @@ const Skills = () => {
         { name: "JavaScript", icon: <SiJavascript className="text-yellow-400 text-2xl" /> },
         { name: "React.js", icon: <FaReact className="text-blue-400 text-2xl" /> },
         { name: "Next.js", icon: <SiNextdotjs className="text-white text-2xl" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 text-2xl" /> }
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 text-2xl" /> },
+        { name: "Angular", icon: <SiAngular className="text-red-600 text-2xl" /> }
       ]
     },
 
@@ -28,7 +29,8 @@ const Skills = () => {
       skills: [
         { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-2xl" /> },
         { name: "Express.js", icon: <SiExpress className="text-gray-800 dark:text-gray-200 text-2xl" /> },
-        { name: "REST APIs", icon: <FaServer className="text-gray-500 text-2xl" /> }
+        { name: "REST APIs", icon: <FaServer className="text-gray-500 text-2xl" /> },
+        { name: "Django", icon: <SiDjango className="text-green-800 text-2xl" /> }
       ]
     },
     {

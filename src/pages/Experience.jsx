@@ -6,6 +6,22 @@ import AnimatedBackground from '../components/ui/AnimatedBackground';
 const Experience = () => {
   const experiences = [
     {
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/GSoC_logo.svg",
+      "company": "Oppia Foundation (GSoC ’25)",
+      "role": "Google Summer of Code Contributor",
+      "duration": "June 2025 - September 2025",
+      "description": [
+        "Restructured Subtopic Pages into Study Guides using model migrations and Apache Beam data processing jobs.",
+        "Engineered 'Senior Guides' features using Angular for the frontend and Django for backend domain services.",
+        "Managed a seamless architectural transition by implementing a robust feature flag deployment strategy.",
+        "Enhanced the Rich Text Editor by developing a 'Worked Examples' component integrated with CKEditor.",
+        "Modified core infrastructure to enable global translation support for Study Guides and Worked Examples.",
+        "Maintained 100% code coverage using Karma, Jasmine, and Puppeteer for unit and acceptance testing."
+      ],
+      "skills": ["Angular", "Django", "Apache Beam", "Python", "CKEditor", "Karma & Jasmine", "Puppeteer"],
+      "certificate": "https://www.linkedin.com/in/krishna-keshri-ab78662b9/overlay/1767381491318/single-media-viewer/?type=IMAGE&profileId=ACoAAEx6xKsBhan11K1GiW7ORuL9TjfeVYDpD-s"
+    },
+    {
       logo: "/dp.jpg",
       company: "Bluestock Finetech",
       role: "Software Developer Intern",
@@ -17,20 +33,20 @@ const Experience = () => {
         "Implemented RESTful APIs with Node.js and Express.js",
       ],
       skills: ["React.js", "Node.js", "Express.js", "Tailwind CSS"],
-      certificate: "https://drive.google.com/file/d/1Tlb7pTy4bffYSGKGvGMK5EFcbMjbNdEg/view?usp=drivesdk"
+      certificate: "https://www.linkedin.com/in/krishna-keshri-ab78662b9/overlay/1754295847070/single-media-viewer/?type=IMAGE&profileId=ACoAAEx6xKsBhan11K1GiW7ORuL9TjfeVYDpD-s"
     }
   ];
 
   return (
     <section className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white dark:bg-gray-900">
       {/* Animated Background */}
-      <AnimatedBackground 
-        opacity={5} 
-        darkOpacity={3} 
-        color="blue" 
-        darkColor="purple" 
+      <AnimatedBackground
+        opacity={5}
+        darkOpacity={3}
+        color="blue"
+        darkColor="purple"
       />
-      
+
       <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
@@ -51,7 +67,7 @@ const Experience = () => {
         <div className="relative">
           {/* Timeline line */}
           <div className="hidden md:block absolute left-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-700 transform -translate-x-1/2"></div>
-          
+
           {/* Experience Items */}
           <div className="space-y-12 md:space-y-16">
             {experiences.map((exp, index) => (
@@ -92,7 +108,7 @@ const Experience = () => {
                         </div>
                       </div>
                       <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">{exp.company}</h4>
-                      
+
                       {/* Description */}
                       <ul className="space-y-2 mb-4">
                         {exp.description.map((item, i) => (
@@ -102,11 +118,11 @@ const Experience = () => {
                           </li>
                         ))}
                       </ul>
-                      
+
                       {/* Skills */}
                       <div className="flex flex-wrap gap-2">
                         {exp.skills.map((skill, i) => (
-                          <span 
+                          <span
                             key={i}
                             className="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-purple-900/50 text-blue-800 dark:text-purple-200 rounded-full"
                           >

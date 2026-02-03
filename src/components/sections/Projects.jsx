@@ -27,9 +27,9 @@ const Projects = () => {
       id: 3,
       title: "AI Interviewer",
       description: "It provides users with personalized questions, evaluates their responses, and offers instant feedback to improve communication, technical, and problem-solving skills.It helps candidates practice effectively and gain confidence before facing real interviews.",
-      tags: ["React","Express","Node","MongoDB"],
+      tags: ["React","Express","Node","MongoDB","Tailwind CSS","Gemini AI"],
       githubUrl: "https://github.com/Krishnakeshri477/AI-Interview-Prepration-Platform",
-      liveUrl: "",
+      liveUrl: "https://ai-interview-prepration-platform.onrender.com/",
       image: "/Screenshot 2025-09-21 134642.png"
     },
     {
