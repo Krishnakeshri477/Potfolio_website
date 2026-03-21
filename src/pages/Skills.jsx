@@ -18,7 +18,7 @@ const Skills = () => {
         { name: "React.js", icon: <FaReact className="text-blue-400 text-2xl" /> },
         { name: "Next.js", icon: <SiNextdotjs className="text-white text-2xl" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400 text-2xl" /> },
-        { name: "Angular", icon: <SiAngular className="text-red-600 text-2xl" /> }
+        { name: "React Native", icon: <FaReact className="text-blue-500 text-2xl" /> }
       ]
     },
 
@@ -50,7 +50,8 @@ const Skills = () => {
         { name: "C", icon: <SiC className="text-blue-700 text-2xl" /> },
         { name: "C++", icon: <SiCplusplus className="text-blue-500 text-2xl" /> },
         { name: "Java", icon: <FaJava className="text-red-500 text-2xl" /> },
-        { name: "Python", icon: <FaPython className="text-blue-400 text-2xl" /> }
+        { name: "Python", icon: <FaPython className="text-blue-400 text-2xl" /> },
+        { name: "JavaScript", icon: <SiJavascript className="text-yellow-400 text-2xl" /> }
       ]
     },
     {

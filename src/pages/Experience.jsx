@@ -6,22 +6,6 @@ import AnimatedBackground from '../components/ui/AnimatedBackground';
 const Experience = () => {
   const experiences = [
     {
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/GSoC_logo.svg",
-      "company": "Oppia Foundation (GSoC ’25)",
-      "role": "Google Summer of Code Contributor",
-      "duration": "June 2025 - September 2025",
-      "description": [
-        "Restructured Subtopic Pages into Study Guides using model migrations and Apache Beam data processing jobs.",
-        "Engineered 'Senior Guides' features using Angular for the frontend and Django for backend domain services.",
-        "Managed a seamless architectural transition by implementing a robust feature flag deployment strategy.",
-        "Enhanced the Rich Text Editor by developing a 'Worked Examples' component integrated with CKEditor.",
-        "Modified core infrastructure to enable global translation support for Study Guides and Worked Examples.",
-        "Maintained 100% code coverage using Karma, Jasmine, and Puppeteer for unit and acceptance testing."
-      ],
-      "skills": ["Angular", "Django", "Apache Beam", "Python", "CKEditor", "Karma & Jasmine", "Puppeteer"],
-      "certificate": "https://www.linkedin.com/in/krishna-keshri-ab78662b9/overlay/1767381491318/single-media-viewer/?type=IMAGE&profileId=ACoAAEx6xKsBhan11K1GiW7ORuL9TjfeVYDpD-s"
-    },
-    {
       logo: "/dp.jpg",
       company: "Bluestock Finetech",
       role: "Software Developer Intern",
